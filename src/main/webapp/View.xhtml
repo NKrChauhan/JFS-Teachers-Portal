@@ -51,17 +51,19 @@
                 <h:column>  
                     <f:facet name="header">Update</f:facet>  
                     <p:commandButton value="Update" action="#{u.edit}" class="btn btn-primary" onclick="PF('dlg1').show();"> 
-                    <p:dialog header="Edit Record" widgetVar="dlg1" modal="true">
-                        <p:ajax event="close" update=":rec" />
-                        <ui:include src="editDialog.xhtml" />
-                    </p:dialog>
-                </p:commandButton>  
+                        <p:dialog header="Edit Record" widgetVar="dlg1" modal="true">
+                            <p:ajax event="close" update=":rec" />
+                            <ui:include src="editDialog.xhtml" />
+                        </p:dialog>
+                    </p:commandButton>  
                 </h:column>  
                 <h:column>  
                     <f:facet name="header">Delete</f:facet>  
                     <h:commandButton action="#{u.delete}" value="Delete" class="btn btn-danger"/> 
                 </h:column>  
-            </h:dataTable>  
+            </h:dataTable> 
+        </h:form>
+        <h:form>
             <center><p:commandButton value="Create New Record" class="btn btn-success" onclick="PF('dlg').show();"></p:commandButton></center> 
             <p:dialog header="Add Student Record" widgetVar="dlg" modal="true">
                 <p:ajax event="close" update=":rec" />
