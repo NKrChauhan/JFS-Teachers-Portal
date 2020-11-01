@@ -28,6 +28,8 @@ public class LoginInvoker implements Serializable {
 
     public String logout() {
         if ((boolean) session.getAttribute("loggedin")) {
+            session.setAttribute(name,"");
+            session.setAttribute("loggedin",false);
             session.invalidate();
             return "index";
         } else {

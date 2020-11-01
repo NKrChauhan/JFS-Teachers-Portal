@@ -19,8 +19,8 @@ public class User {
     int marks;
     String tname;
     ArrayList usersList;
-    private Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
     Connection connection;
+    private Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 
     public int getId() {
         return id;
