@@ -27,6 +27,7 @@
     <h:body>
         <h:form id="rec">
             <h:commandButton value="logout" action="#{LoginInvoker.logout}" ></h:commandButton>
+            <h:commandButton value="Add User" action="#{LoginInvoker.logout}" style="float:right;"></h:commandButton>
             <center>  
                 <h2><h:outputText value="Student Records"/></h2>  
             </center>
@@ -50,7 +51,7 @@
                 </h:column>  
                 <h:column>  
                     <f:facet name="header">Update</f:facet>  
-                    <p:commandButton value="Update" actionListener="#{u.edit()}" class="btn btn-primary" onclick="PF('dlg1').show();">
+                    <p:commandButton value="Update" actionListener="#{u.edit()}" action="#{u.edit()}" class="btn btn-primary" onclick="PF('dlg1').show();">
                     </p:commandButton>  
                 </h:column>  
                 <h:column>  

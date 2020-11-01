@@ -124,11 +124,11 @@ public class User {
         } catch (Exception e) {
             System.out.println(e);
         }
-        sessionMap.put("edituser", user);
+        sessionMap.put("edituser",(User)user);
     }
 // Used to update user record  
 
-    public String update(User u) {
+    public void update(User u) {
         try {
             connection = getConnection();
             PreparedStatement stmt = connection.prepareStatement(
@@ -141,7 +141,6 @@ public class User {
         } catch (Exception e) {
             System.out.println();
         }
-        return "View";
     }
 // Used to delete user record  
     public void delete() {
