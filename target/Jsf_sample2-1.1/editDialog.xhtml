@@ -7,20 +7,20 @@
     <hr/>  
     <div class="form-group">  
         <h:outputLabel for="username" class="control-label col-sm-4">Name</h:outputLabel>  
-        <h:inputText value="#{u.name}" class="form-control" id="username" validatorMessage="User name is required">  
+        <h:inputText value="#{edituser.name}" class="form-control" id="username" validatorMessage="User name is required">  
             <f:validateRequired />  
         </h:inputText>   
     </div>    
     <div class="form-group">  
         <h:outputLabel for="marks" class="control-label col-sm-4">Marks</h:outputLabel>   
-        <h:inputText value="#{u.marks}" id="marks" class="form-control" validatorMessage="Marks is required">
+        <h:inputText value="#{edituser.marks}" id="marks" class="form-control" validatorMessage="Marks is required">
             <f:validateRequired/>  
         </h:inputText>  
     </div>  
     <div class="form-group">
         <center>
             <h:panelGroup>
-                <p:commandButton value="Update" actionListener="#{user.update(u)}" action="View" class="btn btn-success" /> 
+                <p:commandButton value="Update" actionListener="#{user.update(edituser)}" action="View" class="btn btn-success" /> 
             </h:panelGroup> 
         </center>
     </div>  

@@ -120,11 +120,11 @@ public class User {
             user.setName(rs.getString("sname"));
             user.setMarks(rs.getInt("smarks"));
             user.setTname(rs.getString("tname"));
-            sessionMap.put("editUser", user);
             connection.close();
         } catch (Exception e) {
             System.out.println(e);
         }
+        sessionMap.put("edituser", user);
     }
 // Used to update user record  
 
