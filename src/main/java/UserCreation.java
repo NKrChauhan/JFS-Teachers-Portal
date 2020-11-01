@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 @SessionScoped
 @Named("usercreation")
 public class UserCreation implements Serializable {
+
     FacesContext facesContext = FacesContext.getCurrentInstance();
     HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
     private Connection con;
@@ -86,7 +87,9 @@ public class UserCreation implements Serializable {
         } catch (SQLException ex) {
             Logger.getLogger(UserCreation.class.getName()).log(Level.SEVERE, null, ex);
         }
-        String u=new LoginInvoker().logout();
-        return u;
+        session.setAttribute("name", "");
+        session.setAttribute("loggedin", false);
+        session.invalidate();
+        return "index";
     }
 }
