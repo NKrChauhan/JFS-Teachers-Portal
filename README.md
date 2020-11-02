@@ -9,6 +9,6 @@ Teacher for mantaining records of students online.
 
 ### screenshots are as follows for better understanding of the file structure, dependencies and environment:
 
-![](screenshot/file structure.PNG)
+![](screenshot/filestructure.PNG)
 
 
