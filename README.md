@@ -1,4 +1,4 @@
-# JFS-Teachers-Portal
+# JSF-Teachers-Portal
 Teacher for mantaining records of students online.
 
 ### features:
